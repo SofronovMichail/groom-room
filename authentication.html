@@ -39,21 +39,23 @@
       <div class="auth-content-about_title">Войдите или зарегистрируйтесь</div>
       <div class="auth-content-about_text">Чтобы получить возможность добавить заявку</div>
     </div>
-    <from class="auth-form">
+    <from class="auth-form" id="authentication">
       <div class="auth-form_img"></div>
       <div class="auth-form-title">
-        <button class="auth-form-title_button auth-button--active">Вход</button>
-        <button class="auth-form-title_button">Регистрация</button>
+        <button class="auth-form-title_button">Вход</button>
+        <button class="auth-form-title_button auth-button--active">Регистрация</button>
       </div>
-      <input type="text" class="auth-form_input form_item" placeholder="Логин">
-      <input type="text" class="auth-form_input form_item" placeholder="Пароль">
-      <button id="enter" class="auth-form_submit form_item show" type="submit">Войти</button>
-      <button id="reg" class="auth-form_submit form_item" type="submit">Зарегестрироваться</button>
+      <input type="text" v-model="login" class="auth-form_input form_item" placeholder="Логин">
+      <input type="password" v-model="password" class="auth-form_input form_item" placeholder="Пароль">
+      <button id="enter" @click="reg" class="auth-form_submit form_item" type="submit">Войти</button>
+      <button id="register" @click="reg" class="auth-form_submit form_item show">Зарегестрироваться</button>
     </from>
   </div>
   <div class="footer">
     groom-salon.com 2000-2999
   </div>
+  <script src="js/vue.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

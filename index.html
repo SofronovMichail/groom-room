@@ -34,45 +34,38 @@
       </div>
     </div>
   </div>
-  <div class="content">
+  <div class="content" id="content-main">
     <div class="content-sub">
       <div class="sub_text">Профессиональная укладка для ваших домашних питомцев</div>
-      <form action="" class="sub-form">
-        <h4 class="form_title">Создайте заявку</h2>
-          <input type="text" class="form_input form_item" placeholder="Текстовое поле">
-          <input type="text" class="form_input form_item" placeholder="Текстовое поле">
-          <button class="form_button form_item" type="submit">Записаться</button>
+      <form id="form" class="sub-form">
+        <h4 class="form_title">Создайте заявку</h4>
+        <input v-model="name" type="text" class="form_input form_item" placeholder="Кличка животного" required>
+        <select v-model="selected" class="form_select form_item" name="" required>
+          <option disabled value="">Выберите услугу</option>
+          <option v-for="option in options" v-bind:value="option.value">{{ option.text }}</option>
+        </select>
+        <h4>{{ name }}, {{ selected }}</h4>
+        <input type="button" value="Записаться" class="form_button form_item" @click="add"></input>
       </form>
     </div>
     <div class="content-gallery">
       <div class="gallery_title">Наши работы</div>
-      <div class="gallery-container">
-        <div class="container_item">
-          <img class="item-img" src="img/dog.png" alt="dog">
-          <div class="item_title">Dog #1</div>
+      <div id="container-for-card" class="gallery-container">
+        <div v-for="card in cards" class="container_item">
+          <img class="item-img" :src="card.img" alt="dog">
+          <div class="item_title">{{card.title}}</div>
+          <div class="item_title">{{card.servise}}</div>
+          <div class="item_title">{{card.status}}</div>
         </div>
-        <div class="container_item">
-          <img class="item-img" src="img/dog.png" alt="dog">
-          <div class="item_title">Dog #1</div>
-        </div>
-        <div class="container_item">
-          <img class="item-img" src="img/dog.png" alt="dog">
-          <div class="item_title">Dog #1</div>
-        </div>
-        <div class="container_item">
-          <img class="item-img" src="img/dog.png" alt="dog">
-          <div class="item_title">Dog #1</div>
-        </div>
-        <div class="container_item">
-          <img class="item-img" src="img/dog.png" alt="dog">
-          <div class="item_title">Dog #1</div>
-        </div>
+
       </div>
     </div>
   </div>
   <div class="footer">
     groom-salon.com 2000-2999
   </div>
+  <script src="js/vue.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
