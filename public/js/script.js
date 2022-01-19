@@ -1,34 +1,34 @@
 //? Work cards
 const works = new Vue({
-  el: '#content-main',
+  el: '#app',
   data: {
     cards: [
       {
-        img: 'img/dog.png',
+        img: 'public/img/dog.png',
         title: 'Dog #1',
         servise: 'Стрижка',
         status: 'Завершено',
       },
       {
-        img: 'img/dog.png',
+        img: 'public/img/dog.png',
         title: 'Dog #1',
         servise: 'Стрижка',
         status: 'Завершено',
       },
       {
-        img: 'img/dog.png',
+        img: 'public/img/dog.png',
         title: 'Dog #1',
         servise: 'Стрижка',
         status: 'Завершено',
       },
       {
-        img: 'img/dog.png',
+        img: 'public/img/dog.png',
         title: 'Dog #1',
         servise: 'Стрижка',
         status: 'Завершено',
       },
       {
-        img: 'img/dog.png',
+        img: 'public/img/dog.png',
         title: 'Dog #1',
         servise: 'Стрижка',
         status: 'Завершено',
@@ -44,13 +44,19 @@ const works = new Vue({
   methods: {
     add: function () {
       this.cards.push({
-        img: 'img/dog.png',
+        img: 'public/img/dog.png',
         title: this.name,
         servise: this.selected,
         status: 'Принято в обработку',
       });
       this.name = '';
       this.selected = '';
+    },
+    goToMain: function () {
+      window.location.href = '/';
+    },
+    goToEnter: function () {
+      window.location.href = './public/authentication.php';
     },
   },
 });

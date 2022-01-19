@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="public/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
@@ -48,21 +48,21 @@
     <div class="request-content-container">
       <div class="content-container-list">
         <div class="list-item">
-          <img src="img/dog.png" alt="" class="list-item_img">
+          <img src="public/img/dog.png" alt="" class="list-item_img">
           <div class="list-item-about">
             <p class="item-about_title">Заявка #1</p>
             <p class="item-about_text">информация о заявке</p>
           </div>
         </div>
         <div class="list-item">
-          <img src="img/dog.png" alt="" class="list-item_img">
+          <img src="public/img/dog.png" alt="" class="list-item_img">
           <div class="list-item-about">
             <p class="item-about_title">Заявка #1</p>
             <p class="item-about_text">информация о заявке</p>
           </div>
         </div>
         <div class="list-item">
-          <img src="img/dog.png" alt="" class="list-item_img">
+          <img src="public/img/dog.png" alt="" class="list-item_img">
           <div class="list-item-about">
             <p class="item-about_title">Заявка #1</p>
             <p class="item-about_text">информация о заявке</p>
@@ -80,8 +80,8 @@
   <div class="footer">
     groom-salon.com 2000-2999
   </div>
-  <script src="js/vue.js"></script>
-  <script src="js/script.js"></script>
+  <script src="public/js/vue.js"></script>
+  <script src="public/js/script.js"></script>
 </body>
 
 </html>

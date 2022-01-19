@@ -1,7 +1,7 @@
 <?
 function createApplication($idUser, $name, $imgBefore, $imgAfter, $category, $status)
 {
-    require("connect.php");
+    require("./connect.php");
     $date = date("d/m/Y");
     $sql = "INSERT INTO applications (`id-user`, `name`, `img-before`, `img-after`, `date`, `category`, `status`)
   VALUES ('$idUser', '$name', '$imgBefore', '$imgAfter', '$date', '$category', '$status')";
@@ -16,7 +16,7 @@ function createApplication($idUser, $name, $imgBefore, $imgAfter, $category, $st
 
 function getAllApplications()
 {
-    require("connect.php");
+    require("./connect.php");
     $result = mysqli_query($conn, "SELECT * FROM applications");
     $applications = mysqli_fetch_assoc($result);
     echo $applications['name'] . ' ' .
@@ -43,7 +43,7 @@ getAllApplications();
 
 function getAllApplicationsInID($idUser)
 {
-    require("connect.php");
+    require("./connect.php");
     $result = mysqli_query($conn, "SELECT * FROM applications WHERE `id-user` = $idUser");
     $applications = mysqli_fetch_assoc($result);
     echo $applications['name'] . ' ' .
@@ -70,7 +70,7 @@ function getAllApplicationsInID($idUser)
 
 function deleteApplication($idApplication)
 {
-    require("connect.php");
+    require("./connect.php");
     $result = mysqli_query($conn, "SELECT * FROM applications WHERE `id-app` = $idApplication");
     $countRows = mysqli_fetch_row($result)[0];
     if ($countRows) {
@@ -91,7 +91,7 @@ function deleteApplication($idApplication)
 
 function changeStatus($idApplication, $newStatus)
 {
-    require("connect.php");
+    require("./connect.php");
     $sql = "UPDATE `applications` SET `status` = '$newStatus' WHERE `applications`.`id-app` = $idApplication;";
     if ($conn->query($sql) === TRUE) {
         echo "<p>New application status updated successfully</p>";
