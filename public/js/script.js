@@ -48,10 +48,7 @@ const works = new Vue({
     reg_login: '',
     reg_password: '',
     view: {
-      activeReg: false,
       activeTitleReg: false,
-      activeEmail: 'none',
-      activeAuth: true,
       activeTitleAuth: true,
     },
     viewTextTitle: true,
