@@ -22,28 +22,28 @@
             xmlns="http://www.w3.org/2000/svg">
             <path d="M10 20.5V14.5H14V20.5H19V12.5H22L12 3.5L2 12.5H5V20.5H10Z" fill="#6D79EB" />
           </svg>
-          <div @click="goToMain" class="menu-main_text">ГЛАВНАЯ</div>
+          <div class="menu-main_text">ГЛАВНАЯ</div>
         </div>
-        <div v-if="!key" class="header-menu-enter header-menu_item">
+        <div @click="goToEnter" v-if="!key" class="header-menu-enter header-menu_item">
           <svg class="menu-main_svg" width="24" height="25" viewBox="0 0 24 25" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M12.65 10.5C11.83 8.17 9.61 6.5 7 6.5C3.69 6.5 1 9.19 1 12.5C1 15.81 3.69 18.5 7 18.5C9.61 18.5 11.83 16.83 12.65 14.5H17V18.5H21V14.5H23V10.5H12.65ZM7 14.5C5.9 14.5 5 13.6 5 12.5C5 11.4 5.9 10.5 7 10.5C8.1 10.5 9 11.4 9 12.5C9 13.6 8.1 14.5 7 14.5Z"
               fill="#C7C7C7" />
           </svg>
-          <div @click="goToEnter" class="menu-enter_text">ВХОД</div>
+          <div class="menu-enter_text">ВХОД</div>
         </div>
-        <div v-if="key" class="header-menu-request header-menu_item">
+        <div @click="goToRequsts" v-if="key" class="header-menu-request header-menu_item">
           <svg class="menu-request_svg" width="24" height="25" viewBox="0 0 24 25" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M19 3.5H14.82C14.4 2.34 13.3 1.5 12 1.5C10.7 1.5 9.6 2.34 9.18 3.5H5C3.9 3.5 3 4.4 3 5.5V19.5C3 20.6 3.9 21.5 5 21.5H19C20.1 21.5 21 20.6 21 19.5V5.5C21 4.4 20.1 3.5 19 3.5ZM12 3.5C12.55 3.5 13 3.95 13 4.5C13 5.05 12.55 5.5 12 5.5C11.45 5.5 11 5.05 11 4.5C11 3.95 11.45 3.5 12 3.5ZM14 17.5H7V15.5H14V17.5ZM17 13.5H7V11.5H17V13.5ZM17 9.5H7V7.5H17V9.5Z"
               fill="#C7C7C7" />
           </svg>
-          <div @click="goToRequsts" class="menu-request_text">ЗАЯВКИ</div>
+          <div class="menu-request_text">ЗАЯВКИ</div>
         </div>
-        <div v-if="key" class="header-menu-request header-menu_item header-menu_item--checked">
-          <div @click="logoutUser" class="menu-request_text">ВЫЙТИ</div>
+        <div @click="logoutUser" v-if="key" class="header-menu-request header-menu_item header-menu_item--checked">
+          <div class="menu-request_text">ВЫЙТИ</div>
         </div>
       </div>
     </div>

@@ -17,12 +17,12 @@
     <div class="header">
       <div class="header-title">GROOMING<span class="header-title_text">Service for dogs and cats</span></div>
       <div class="header-menu">
-        <div class="header-menu-main header-menu_item">
+        <div @click="goToMain" class="header-menu-main header-menu_item">
           <svg class="menu-main_svg" width="24" height="25" viewBox="0 0 24 25" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path d="M10 20.5V14.5H14V20.5H19V12.5H22L12 3.5L2 12.5H5V20.5H10Z" fill="#C7C7C7" />
           </svg>
-          <div @click="goToMain" class="menu-main_text">ГЛАВНАЯ</div>
+          <div class="menu-main_text">ГЛАВНАЯ</div>
         </div>
         <div class="header-menu-request header-menu_item header-menu_item--checked">
           <svg class="menu-request_svg" width="24" height="25" viewBox="0 0 24 25" fill="none"
