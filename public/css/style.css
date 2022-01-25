@@ -109,7 +109,14 @@ body {
   margin-left: 116px;
 }
 .form_title {
-  width: 144px;
+  height: 21px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 23px;
+}
+.form_else {
   height: 21px;
   font-style: normal;
   font-weight: bold;
@@ -257,6 +264,7 @@ body {
 .auth-form-title {
   display: flex;
   margin-bottom: 25px;
+  z-index: 100;
 }
 .auth-form-title_button {
   font-style: normal;
@@ -267,6 +275,7 @@ body {
   background: none;
   border: none;
   margin-right: 13px;
+  z-index: 100;
 }
 .auth-button--active {
   color: black;
@@ -283,11 +292,7 @@ body {
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
-  display: none;
   padding: 16px 0 16px 0;
-}
-.show {
-  display: block;
 }
 
 /* request page */
@@ -297,7 +302,6 @@ body {
   align-items: flex-start;
   padding: 0px 0px 80px 0px;
   width: 1080px;
-  height: 605px;
   margin-left: 200px;
 }
 .request-content_title {
@@ -315,12 +319,10 @@ body {
 }
 .request-content-container {
   width: 880px;
-  height: 389px;
   display: flex;
 }
 .content-container-list {
   width: 474px;
-  height: 389px;
 }
 .list-item {
   display: flex;
